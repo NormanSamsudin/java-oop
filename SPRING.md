@@ -22,7 +22,7 @@ public class DemoexampleApplication {
 
     @GetMapping("/hello")
     public String check() {
-        return "Hello World test te ";
+        return "Hello World";
     }
 
     public static void main(String[] args) {
