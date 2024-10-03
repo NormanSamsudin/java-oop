@@ -101,3 +101,86 @@ In Java, different data structures are used based on requirements such as data a
 - Write a Java program to check if a string is a palindrome.
 - Write a Java program to find the largest number in an array.
 - Implement a sorting algorithm (e.g., Bubble Sort, Selection Sort).
+
+# Access Modifiers in Java
+
+In Java, access modifiers determine the visibility or accessibility of classes, methods, and variables. There are four main types of access modifiers:
+
+## 1. **Public**
+
+- **Definition**: The `public` modifier allows a class, method, or variable to be accessible from any other class in any package.
+  
+- **Usage**: It is used when you want to make something available universally.
+
+- **Example**:
+    ```java
+    public class MyClass {
+        public int myVariable;
+
+        public void myMethod() {
+            // method logic
+        }
+    }
+    ```
+
+## 2. **Private**
+
+- **Definition**: The `private` modifier restricts the visibility of a class member (method or variable) to the containing class only. No other class can access it, even if they are in the same package.
+
+- **Usage**: It is used to encapsulate and protect the internal state of an object.
+
+- **Example**:
+    ```java
+    public class MyClass {
+        private int myVariable;
+
+        private void myMethod() {
+            // method logic
+        }
+    }
+    ```
+
+## 3. **Protected**
+
+- **Definition**: The `protected` modifier allows visibility to classes in the same package and also to subclasses (even if they are in different packages).
+
+- **Usage**: It is used when you want to allow a class's members to be accessible by subclasses and classes in the same package.
+
+- **Example**:
+    ```java
+    public class MyClass {
+        protected int myVariable;
+
+        protected void myMethod() {
+            // method logic
+        }
+    }
+    ```
+
+## 4. **Default (Package-Private)**
+
+- **Definition**: When no access modifier is specified, it is considered default (also known as package-private). This means the class, method, or variable is accessible only within its own package.
+
+- **Usage**: It is used when you want to limit access to classes within the same package without exposing them to classes in other packages.
+
+- **Example**:
+    ```java
+    class MyClass { // Default access modifier
+        int myVariable; // Default access
+
+        void myMethod() {
+            // method logic
+        }
+    }
+    ```
+
+## Summary
+
+| Access Modifier | Accessible in the Same Package | Accessible in Subclasses | Accessible in Other Packages |
+| --------------- | ------------------------------ | ------------------------ | ---------------------------- |
+| Public          | Yes                            | Yes                      | Yes                          |
+| Private         | No                             | No                       | No                           |
+| Protected       | Yes                            | Yes                      | No                           |
+| Default         | Yes                            | No                       | No                           |
+
+Understanding these access modifiers is crucial for designing classes and managing visibility, encapsulation, and inheritance in Java.
